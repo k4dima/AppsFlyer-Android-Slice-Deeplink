@@ -10,7 +10,7 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiSelector
 import com.appsflyer.dimaone.BuildConfig.APPLICATION_ID
-import org.junit.Assert
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -26,8 +26,6 @@ class DeeplinkTest {
         val slice = device.findObject(UiSelector().text("Deeplink"))
         slice.click()
         val text = device.findObject(By.res(APPLICATION_ID, "text"))
-        Assert.assertTrue(
-            text.text == "customscheme://?af_deeplink=true&campaign=someCampaign&media_source=someMediaSource"
-        )
+        assertTrue(text.text == "customscheme://?af_deeplink=true&campaign=someCampaign&media_source=someMediaSource")
     }
 }
