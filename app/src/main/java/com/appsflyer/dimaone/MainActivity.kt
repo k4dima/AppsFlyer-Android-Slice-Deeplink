@@ -11,8 +11,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         @Suppress("SpellCheckingInspection")
         AppsFlyerLib.getInstance().startTracking(application, "fhXj93vYUC2beX4a8mQode")
-        val deeplink = intent.data?.toString()
-        println(deeplink)
-        text.text = deeplink
+        text.text = intent.data?.toString()
     }
 }

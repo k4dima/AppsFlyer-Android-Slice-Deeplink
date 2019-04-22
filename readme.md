@@ -1,0 +1,1 @@
+[Install slice viewer](https://github.com/googlesamples/android-SliceViewer/releases) and run DeepLinkTest
